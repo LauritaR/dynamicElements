@@ -11,7 +11,6 @@ try:
     driver = webdriver.Chrome(service=service)
     
     driver.get("http://suninjuly.github.io/explicit_wait2.html")
-    #book the right price
     price = driver.find_element(By.ID, "price").text
 
     dollars100 = WebDriverWait(driver, 12).until(
@@ -20,7 +19,6 @@ try:
     book = driver.find_element(By.ID, "book")
     book.click()
     
-    #solve the problem
     x_value=driver.find_element(By.ID,'input_value').text
     
     calc_function=str(math.log(abs(12*math.sin(int(x_value)))))
@@ -29,7 +27,7 @@ try:
     
     driver.find_element(By.XPATH,'/html/body/form/div/div/button').click()
 
-    time.sleep(5)
+    time.sleep(2)
     
 finally:
     driver.quit()
