@@ -36,7 +36,7 @@ class TestRegistration(unittest.TestCase):
         self.assertEqual(success_message, 'Congratulations! You have successfully registered!')
         time.sleep(2)
 
-     
+    
     
     def test_registration2(self):
         self.fill_registration_form("http://suninjuly.github.io/registration2.html")
